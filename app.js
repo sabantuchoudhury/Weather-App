@@ -14,7 +14,7 @@ const iconImage = document.querySelector('#iconImage')
 
 // Uses location key to get weather info.
 async function getWeather(id) {
-    const response = await fetch(`http://dataservice.accuweather.com/currentconditions/v1/${id}?apikey=${key}`)
+    const response = await fetch(`https://dataservice.accuweather.com/currentconditions/v1/${id}?apikey=${key}`)
     const data = await response.json()
     return (data)
 }
