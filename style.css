@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(./bg/background.jpg);
+    color: #161616;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 8px;
+    width: 55vw;
+}
+
+button {
+    height: 39px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+hr {
+    border-top: 1px solid #161616;
+    width: 30vw;
+}
+
+#dataOutput {
+    border-radius: 30px;
+
+    margin: 20px;
+    padding: 20px;
+
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#results {
+    border-radius: 30px;
+    border: 2px solid #161616;
+    box-shadow: 5px 5px #6b6b6b23;
+
+    margin: 50px;
+    padding: 20px;
+    background-image: linear-gradient(#3456a0, #729dfa);
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-items: stretch;
+}
+
+#infoBox {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#firstBox {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 20px;
+    font-size: 30px;
+}
+
+#secondBox {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 20px;
+    font-size: 30px;
+}
+
+#time {
+    font-size: 50px;
+}
+
+#iconDiv {
+    font-size: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    width: 160px;
+    height: 100pxs;
+}
