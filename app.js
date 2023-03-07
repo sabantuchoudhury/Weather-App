@@ -52,8 +52,8 @@ const toTwoDigits = (time) => {
     return newTime
 }
 
-const getTime = (data) => {
-    const time = new Date(data)
+const getTime = () => {
+    const time = new Date()
     
     const hours = time.getHours()
     const minutes = time.getMinutes()
@@ -61,8 +61,8 @@ const getTime = (data) => {
     return toTwoDigits(hours) + ':' + toTwoDigits(minutes)
 }
 
-const getDate = (data) => {
-    const date = new Date(data)
+const getDate = () => {
+    const date = new Date()
     
     const dayOTW = date.getDay()
     const day = date.getDate()
@@ -101,8 +101,8 @@ const dataLayout = (data) => {
     currentLocation.innerText = (data.cityInfo.EnglishName + ", " + data.cityInfo.Country.LocalizedName)
     currentWeather.innerText = (data.weather[0].WeatherText)
     temperature.innerText = (data.weather[0].Temperature.Metric.Value + "°C")
-    time.innerText = (getTime(data.weather[0].LocalObservationDateTime))
-    date.innerText = (getDate(data.weather[0].LocalObservationDateTime))
+    time.innerText = (getTime())
+    date.innerText = (getDate())
     iconImage.src = getIcon(data.weather[0].WeatherIcon)
 }
 
