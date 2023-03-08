@@ -41,68 +41,11 @@ const getIcon = (number) => {
     return './icon/' + number + '.png'
 }
 
-const toTwoDigits = (time) => {
-    timeString = time.toString().length
-    if (timeString < 2) {
-        newTime = '0' + time
-    } else {
-        newTime = time
-    }
-    console.log(newTime)
-    return newTime
-}
-
-const getTime = () => {
-    const time = new Date()
-    
-    const hours = time.getHours()
-    const minutes = time.getMinutes()
-
-    return toTwoDigits(hours) + ':' + toTwoDigits(minutes)
-}
-
-const getDate = () => {
-    const date = new Date()
-    
-    const dayOTW = date.getDay()
-    const day = date.getDate()
-    const month = date.getMonth() + 1
-    const year = date.getFullYear()
-
-    switch(dayOTW) {
-        case 1:
-            dayOfTheWeek = 'Monday'
-            break;
-        case 2:
-            dayOfTheWeek = 'Tuesday'
-            break;
-        case 3:
-            dayOfTheWeek = 'Wednesday'
-            break;
-        case 4:
-            dayOfTheWeek = 'Thursday'
-            break;
-        case 5:
-            dayOfTheWeek = 'Friday'
-            break;
-        case 6:
-            dayOfTheWeek = 'Saturday'
-            break;
-        case 7:
-            dayOfTheWeek = 'Sunday'
-            break;
-    }
-
-    return dayOfTheWeek + ', ' + toTwoDigits(day) + '/' + toTwoDigits(month) + '/' + year
-}
-
 const dataLayout = (data) => {
     console.log(data.weather[0])
     currentLocation.innerText = (data.cityInfo.EnglishName + ", " + data.cityInfo.Country.LocalizedName)
     currentWeather.innerText = (data.weather[0].WeatherText)
     temperature.innerText = (data.weather[0].Temperature.Metric.Value + "°C")
-    time.innerText = (getTime())
-    date.innerText = (getDate())
     iconImage.src = getIcon(data.weather[0].WeatherIcon)
 }
 
@@ -118,8 +61,6 @@ dataInput.addEventListener('submit', e => {
     e.preventDefault()
     cityInput = dataInput.userInput.value.trim()
     dataInput.reset()
-
-    
 
     updateCity(cityInput)
     .then(data => {

@@ -10,31 +10,41 @@ body {
 
 input {
     padding: 10px;
-    margin-bottom: 8px;
-    width: 45vw;
+    margin-bottom: 10px;
+    width: 450px;
+    height: 20px;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
+    border-style: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button img {
+    width: 20px;
+    border-right: 5px;
 }
 
 button {
-    height: 39px;
-    width: 75px;
+    height: 40px;
+    width: 58px;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
-    background-color: #ececec;
-    border-color: #d1d1d1;
+    background-color: #8797f1;
+    border: none;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: #d1d1d1;
+    background-color: #677bec;
 }
 
 hr {
-    display: none;
     border-top: 1px solid #ececec;
     box-shadow: 2px 2px black;
-    width: 400px;
+    width: 500px;
 }
 
 #dataOutput {
@@ -55,7 +65,7 @@ hr {
     width: 1500px;
 
     margin: auto;
-    margin-top: 20px;
+    margin-top: 80px;
     padding: 20px;
     
     text-align: center;
@@ -108,7 +118,7 @@ hr {
     align-items: center;
 }
 
-img {
+#iconDiv img {
     width: 160px;
     height: 100pxs;
 }
@@ -121,6 +131,18 @@ img {
         width: 380px
     }
     hr {
-        display: block;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #results {
+        width: 350px;
+    }
+    input {
+        width: 280px
+    }
+    hr {
+        width: 350px;
     }
 }
