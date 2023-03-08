@@ -2,27 +2,39 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url(./bg/background.jpg);
-    color: #161616;
+    /* background-image: url(./bg/background.jpg); */
+    background-color: rgb(51, 51, 155);
+    color: #ececec;
+    text-shadow: 2px 2px black;
 }
 
 input {
     padding: 10px;
     margin-bottom: 8px;
     width: 45vw;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 button {
     height: 39px;
+    width: 75px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #ececec;
+    border-color: #d1d1d1;
 }
 
 button:hover {
     cursor: pointer;
+    background-color: #d1d1d1;
 }
 
 hr {
-    border-top: 1px solid #161616;
-    width: 30vw;
+    display: none;
+    border-top: 1px solid #ececec;
+    box-shadow: 2px 2px black;
+    width: 400px;
 }
 
 #dataOutput {
@@ -40,23 +52,16 @@ hr {
 }
 
 #results {
-    width: 1000px;
-
-    border-radius: 30px;
-    border: 2px solid #161616;
-    box-shadow: 5px 5px #6b6b6b23;
+    width: 1500px;
 
     margin: auto;
-    margin-top: 100px;
+    margin-top: 20px;
     padding: 20px;
-    background-image: linear-gradient(#3456a0, #729dfa);
     
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    align-items: stretch;
 }
 
 #infoBox {
@@ -99,6 +104,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    gap: 30px;
     align-items: center;
 }
 
@@ -113,5 +119,8 @@ img {
     }
     input {
         width: 380px
+    }
+    hr {
+        display: block;
     }
 }
