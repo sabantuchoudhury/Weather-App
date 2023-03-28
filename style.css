@@ -123,6 +123,19 @@ hr {
     height: 100pxs;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #3451a0;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 @media screen and (max-width: 1500px) {
     #results {
         width: 500px;
