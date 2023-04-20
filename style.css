@@ -150,7 +150,7 @@ footer {
 
 @media screen and (max-width: 800px) {
     #results {
-        width: 350px;
+        width: 340px;
     }
     input {
         width: 280px
